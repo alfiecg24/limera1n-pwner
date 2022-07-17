@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import limera1n
+
+def main():
+    print("\n** limera1nPwner **\n")
+    print("Exploit based off of limera1n exploit by geohot")
+    ready = input("Press any key to begin... ")
+    if ready is not None:
+        limera1n.exploit()
+
+if __name__ == '__main__':
+    main()
