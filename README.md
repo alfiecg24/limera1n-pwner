@@ -21,4 +21,7 @@ Make sure to have both PyUSB and libusb installed
 
 # Credits
 
-Majority of the code taken from axi0mx's [ipwndfu](https://github.com/axi0mx/ipwndfu)
+* Majority of the code taken from axi0mx's [ipwndfu](https://github.com/axi0mx/ipwndfu)
+* I have ported it to Python 3
+* I have fixed the libusb errors
+* I have fixed other errors that occur in ipwndfu on the latest macOS versions
