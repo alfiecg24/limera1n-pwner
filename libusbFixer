@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+
+from os.path import exists
+from os import system
+from time import sleep
+import sys
+
+latestVersion = '1.0.26'
+dylibName = 'libusb-1.0.0.dylib'
+dylibAliasName = 'libusb-1.0.dylib'
+dylibArName = 'libusb-1.0.a'
+pkgConfigName = 'libusb-1.0.pc'
+
+def main():
+    print("\n** libusb fixer")
+    print("This program is used to fix the common no USB backend error with PyUSB\n")
+
+    sleep(2)
+
+    print("Checking for Homebrew installation")
+    if exists('/opt/homebrew'):
+        print("All good, Homebrew installation found")
+    else:
+        print("No Homebrew installation found")
+        print("Visit brew.sh to install")
+        sys.exit(0)
+
+    sleep(1)
+    
+    print("Checking for libusb installation")
+    if exists('/opt/homebrew/Cellar/libusb'):
+        print("libusb installtion found, checking version")
+        if exists(f'/opt/homebrew/Cellar/libusb/{latestVersion}'):
+            print("Latest version installed, continuing...")
+        else:
+            print(f"Please make sure you have libusb version {latestVersion} installed")
+    else:
+        print("Please install libusb using \'brew install libusb\'")
+
+    sleep(1)
+
+    print("Copying dylib and pkgconfig files to /usr/local/lib")
+    print("You will need to enter your sudo password")
+    sleep(1)
+
+    print("Removing any existing versions")
+    system(f'sudo rm /usr/local/lib/{dylibName}')
+    system(f'sudo rm /usr/local/lib/{dylibAliasName}')
+    system(f'sudo rm /usr/local/lib/{dylibArName}')
+    system(f'sudo rm /usr/local/lib/pkgconfig/{pkgConfigName}')
+
+    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibName} /usr/local/lib/{dylibName}')
+    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibAliasName} /usr/local/lib/{dylibAliasName}')
+    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibArName} /usr/local/lib/{dylibArName}')
+    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/pkgconfig/{pkgConfigName} /usr/local/lib/pkgconfig/{pkgConfigName}')
+
+    print("Finished!")
+    sys.exit(1)
+ 
+if __name__ == '__main__':
+    main()
