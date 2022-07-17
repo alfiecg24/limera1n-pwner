@@ -3,8 +3,8 @@ A limera1n pwner for the iPod touch (3rd generation), the iPhone 3GS and all A4-
 
 # Compatibility
 
-M1 and Intel Macs: macOS Monterey or higher (need libusb bottles for lower versions)
-Linux (presumably, not tested)
+* M1 and Intel Macs: macOS Monterey or higher (need libusb bottles for lower versions)
+* Linux (presumably, not tested)
 
 # Features
 
