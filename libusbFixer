@@ -17,6 +17,10 @@ def main():
 
     sleep(2)
 
+    if exists(f'/usr/local/lib/{dylibName}') and exists(f'/usr/local/lib/{dylibAliasName}') and exists(f'/usr/local/lib/{dylibArName}') and exists(f'/usr/local/lib/pkgconfig/{pkgConfigName}'):
+        print("No need, your installation is fine!")
+        sys.exit(0)
+
     print("Checking for Homebrew installation")
     if exists('/opt/homebrew'):
         print("All good, Homebrew installation found")
