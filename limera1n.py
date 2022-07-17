@@ -235,4 +235,5 @@ def exploit():
 
     print('Device is now in pwned DFU Mode.')
     t1 = time.time()
+    time.sleep(1)
     print("Pwned in %.2fs" % round((t1-t0), 2))
