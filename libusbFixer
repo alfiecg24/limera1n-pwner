@@ -32,7 +32,7 @@ def main():
     sleep(1)
     
     print("Checking for libusb installation")
-    if exists('/opt/homebrew/Cellar/libusb'):
+    if exists('/opt/homebrew/opt/libusb'):
         print("libusb installtion found, checking version")
         if exists(f'/opt/homebrew/Cellar/libusb/{latestVersion}'):
             print("Latest version installed, continuing...")
@@ -53,10 +53,10 @@ def main():
     system(f'sudo rm /usr/local/lib/{dylibArName}')
     system(f'sudo rm /usr/local/lib/pkgconfig/{pkgConfigName}')
 
-    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibName} /usr/local/lib/{dylibName}')
-    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibAliasName} /usr/local/lib/{dylibAliasName}')
-    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/{dylibArName} /usr/local/lib/{dylibArName}')
-    system(f'sudo cp /opt/homebrew/Cellar/libusb/{latestVersion}/lib/pkgconfig/{pkgConfigName} /usr/local/lib/pkgconfig/{pkgConfigName}')
+    system(f'sudo cp /opt/homebrew/opy/libusb/lib/{dylibName} /usr/local/lib/{dylibName}')
+    system(f'sudo cp /opt/homebrew/opt/libusb/lib/{dylibAliasName} /usr/local/lib/{dylibAliasName}')
+    system(f'sudo cp /opt/homebrew/opt/libusb/lib/{dylibArName} /usr/local/lib/{dylibArName}')
+    system(f'sudo cp /opt/homebrew/opt/libusb/lib/pkgconfig/{pkgConfigName} /usr/local/lib/pkgconfig/{pkgConfigName}')
 
     print("Finished!")
     sys.exit(1)
