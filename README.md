@@ -1,3 +1,5 @@
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=48E223&width=435&lines=limera1n+pwner;For+iPod+touch+(3rd+gen),+iPhone+3GS,;And+all+A4+based+devices;Compatible+with+M1+and+Intel+Macs" alt="limera1n pwner, for M1 and Intel Macs" /></a>
+
 # limera1n-pwner
 A limera1n pwner for the iPod touch (3rd generation), the iPhone 3GS and all A4-based devices.
 
