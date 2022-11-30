@@ -11,6 +11,7 @@ A limera1n pwner for the iPod touch (3rd generation), the iPhone 3GS and all A4-
 # Features
 
 * Fully functioning limera1n pwner, written completely in Python
+* Put a supported device into pwned DFU mode
 * Fix for PyUSB having no backend
 * Support for macOS Monterey and higher
 
