@@ -5,7 +5,6 @@ from os import system
 from time import sleep
 import sys
 
-latestVersion = '1.0.26'
 dylibName = 'libusb-1.0.0.dylib'
 dylibAliasName = 'libusb-1.0.dylib'
 dylibArName = 'libusb-1.0.a'
@@ -33,11 +32,7 @@ def main():
     
     print("Checking for libusb installation")
     if exists('/opt/homebrew/opt/libusb'):
-        print("libusb installtion found, checking version")
-        if exists(f'/opt/homebrew/Cellar/libusb/{latestVersion}'):
-            print("Latest version installed, continuing...")
-        else:
-            print(f"Please make sure you have libusb version {latestVersion} installed")
+        print("libusb installation found")
     else:
         print("Please install libusb using \'brew install libusb\'")
 
